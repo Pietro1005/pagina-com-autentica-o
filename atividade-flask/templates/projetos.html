@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meus Projetos</title>
+</head>
+<body>
+    <h1>Meus Projetos</h1>
+    <p>Usuário: {{ nome }}</p>
+    <hr>
+
+    {% for projeto in projetos %}
+        <h2>{{ projeto["nome"] }}</h2>
+        <p>{{ projeto["descricao"] }}</p>
+        <p><strong>Tecnologias:</strong> {{ projeto["tecnologia"] }}</p>
+        <hr>
+    {% else %}
+        <p>Nenhum projeto cadastrado.</p>
+    {% endfor %}
+
+    <a href="/">Início</a><br><br>
+    <a href="/perfil">Meu Perfil</a><br><br>
+    <a href="/logout">Sair</a>
+</body>
+</html>

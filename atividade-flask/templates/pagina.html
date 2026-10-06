@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Minha Página Pessoal</title>
+</head>
+<body>
+    <h1>Minha Página Pessoal</h1>
+    <p>Projeto desenvolvido com Flask, SQLite e Python.</p>
+    <hr>
+
+    {% if usuario %}
+        <p>Olá, {{ nome }}!</p>
+        <a href="/perfil">Meu Perfil</a><br>
+        <a href="/projetos">Meus Projetos</a><br>
+        <a href="/logout">Sair</a>
+    {% else %}
+        <p>Faça login para acessar as páginas restritas.</p>
+        <a href="/login">Fazer Login</a>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Perfil</title>
+</head>
+<body>
+    <h1>Meu Perfil</h1>
+    <p>Usuário: {{ nome }}</p>
+    <hr>
+
+    {% if perfil %}
+        <h2>{{ perfil["titulo"] }}</h2>
+        <p>{{ perfil["descricao"] }}</p>
+    {% endif %}
+
+    <hr>
+    <a href="/">Início</a><br><br>
+    <a href="/projetos">Meus Projetos</a><br><br>
+    <a href="/logout">Sair</a>
+</body>
+</html>
